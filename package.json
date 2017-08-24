@@ -30,10 +30,12 @@
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
   },
-  "babel": [
-    "es2015",
-    "react"
-  ],
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
   "dependencies": {
     "immutable": "^3.8.1",
     "react": "^15.6.1",
