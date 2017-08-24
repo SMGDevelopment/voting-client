@@ -21,8 +21,13 @@
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "chai": "^3.5.0",
+    "mocha": "^3.5.0",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
   },
-  "babel": ["es2015", "react"]
+  "babel": [
+    "es2015",
+    "react"
+  ]
 }
