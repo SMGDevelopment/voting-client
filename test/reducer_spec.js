@@ -76,9 +76,27 @@ describe('reducer', () => {
     expect(nextState).to.equal(fromJS({
       vote: {
         pair: ['Trainspotting', '28 Days Later'],
-        tally: {Trainspoitting: 1}
+        tally: {Trainspotting: 1}
       },
       hasVoted: 'Trainspotting'
+    }))
+  })
+
+  it('does not set hasVoted for VOTE on an invalid entry', () => {
+    const state = fromJS({
+      vote: {
+        pair: ['Trainspotting', '28 Days Later'],
+        tally: {Trainspotting: 1}
+      }
+    })
+    const action = {type: 'VOTE', entry: 'Sunshine'}
+    const nextState = reducer(state, action)
+
+    expect(nextState).to.equal(fromJS({
+      vote: {
+        pair: ['Trainspotting', '28 Days Later'],
+        tally: {Trainspotting: 1}
+      }
     }))
   })
 })
